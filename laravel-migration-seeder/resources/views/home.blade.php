@@ -27,5 +27,21 @@ Cancellato
 Inserite inizialmente i dati tramite PhpMyAdmin.
 Create Model relativo ed un Controller per mostrare nella home page tutti i treni che sono in partenza dalla data odierna.
 Lunedì lavoreremo sulla stessa repo per aggiungere i seeder. --}}
+
+{{-- SECONDA MILESTONE LUNEDI 21/02
+
+    
+Ciao Ragazzi,
+ecco la repo di oggi
+https://github.com/ChiaraPassaro/classe49-real-estate
+Esercizio
+Stessa repo di venerdì
+aggiungiamo un TrainSeeder
+php artisan make:seeder TrainSeeder
+Usiamo anche Faker per i dati, il procedimento è nelle slide :faccia_leggermente_sorridente:
+Infine proviamo a fare una Show come visto stamattina
+Domani alle 9.30 lezione su Git con @Elisabetta Dahò
+Buon Lavoro! :laptop_parrot: --}}
+
 </body>
 </html>
