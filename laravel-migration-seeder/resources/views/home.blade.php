@@ -1,15 +1,3 @@
-<?php
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>traccia</title>
-</head>
-<body>
 {{-- Esercizio di oggi:
 nome repo: laravel-migration-seeder
 Creiamo una tabella trains e relativa Migration
@@ -43,5 +31,19 @@ Infine proviamo a fare una Show come visto stamattina
 Domani alle 9.30 lezione su Git con @Elisabetta Dahò
 Buon Lavoro! :laptop_parrot: --}}
 
-</body>
-</html>
+@extends('layouts.base')
+
+@section('content')
+<div class="cards">
+@foreach ($trains as $train)
+    <ul class="card">
+        <li>Agenzia {{ $train -> agency }}</li>
+        <li>Partenza {{ $train -> departure_station }} - {{ $train -> departure_time }}</li>
+        <li>Arrivo{{ $train -> arrival_station }} - {{ $train -> arrival_time }}</li>
+        <li>{{ $train -> train_code }} - N# Carrozze: {{ $train -> train_carriage }}</li>
+        <li>{{ ($train -> in_time) ? 'in orario' : 'in ritardo' }}</li>
+        <li>{{ ($train -> deleted) ? 'Cancellato' : ''  }}</li>
+    </ul>
+@endforeach
+</div>
+@endsection
